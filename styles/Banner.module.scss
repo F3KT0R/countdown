@@ -1,4 +1,47 @@
 .time {
-    font-size: 3em;
     text-shadow: .05em .05em black;
+    font-size: 3em;
+    max-width: 50%;
+    border: .15em solid #241d19;
+    box-shadow: 3em 3em 5em 3em #100d0b;
+    display: flex;
+    padding: 0 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to right bottom,
+        #353731,
+        #1c1d1a
+    );
+
+    .element {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em 4em;
+        margin: 2em 0;
+        background-color: #231d148f;
+        gap: .5em;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+
+        h6 {
+            font-size: large;
+        }
+
+        &:first-child {
+            margin: 0;
+            color: #ff9752;
+            background-color: transparent;
+            font-size: 2em;
+            gap: 0;
+            min-width: 100%;
+            padding: .5em;
+            padding-top: 0;
+            border-radius: 0;
+            border-bottom: .03em solid #000;
+        }
+    }
 }

@@ -8,17 +8,22 @@ export function getCountdown() {
     
     let difference = end_milliseconds - current_milliseconds;
 
-    const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+    let days = Math.floor(difference / 1000 / 60 / 60 / 24);
     difference -= days * 24 * 60 * 60 * 1000;
 
-    const hours = Math.floor(difference / 1000 / 60 / 60);
+    let hours = Math.floor(difference / 1000 / 60 / 60);
     difference -= hours * 60 * 60 * 1000;
 
-    const minutes = Math.floor(difference / 1000 / 60);
+    let minutes = Math.floor(difference / 1000 / 60);
     difference -= minutes * 60 * 1000;
     
-    const seconds = Math.floor(difference / 1000);
+    let seconds = Math.floor(difference / 1000);
     difference -= seconds * 1000;
+
+    10 > days ? days = '0' + days : days;
+    10 > hours ? hours = '0' + hours : hours;
+    10 > minutes ? minutes = '0' + minutes : minutes;
+    10 > seconds ? seconds = '0' + seconds : seconds;
     
     const result = [days, hours, minutes, seconds]
 

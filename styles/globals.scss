@@ -3,8 +3,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --main-gradient: linear-gradient(
     to right bottom,
-    #af794f,
-    #62442c
+    #504439,
+    #282e2b
   )
 }
 
@@ -19,7 +19,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-image: url('../public/pegboard.png');
+  background: var(--main-gradient);
 }
 
 a {
